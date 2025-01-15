@@ -33,30 +33,32 @@ logging - Para rastrear a execução do pipeline
 
 ## Instruções de Configuração
 
-Clonar o Repositório
+## Clonar o Repositório
 
-git clone https://github.com/username/etl-api-project.git
+```git clone https://github.com/username/etl-api-project.git
 cd etl-api-project
-
+```
 ## Instalar Dependências
 
-pip install -r requirements.txt
+```pip install -r requirements.txt
+```
 
 ## Configurar Variáveis de Ambiente
 
 Crie um arquivo .env no diretório raiz e adicione o seguinte:
 
-API_URL=<seu_endpoint_da_api>
+```API_URL=<seu_endpoint_da_api>
 API_KEY=<sua_chave_de_api>
 DB_HOST=<seu_host_do_banco_de_dados>
 DB_PORT=<sua_porta_do_banco_de_dados>
 DB_USER=<seu_usuario_do_banco_de_dados>
 DB_PASSWORD=<sua_senha_do_banco_de_dados>
 DB_NAME=<seu_nome_do_banco_de_dados>
+```
 
 ## Estrutura do Projeto
 
-project-root/
+```project-root/
 |
 |-- etl_pipeline.py         # Script principal para executar o processo ETL
 |-- config.py               # Arquivo de configuração para variáveis de ambiente
@@ -65,6 +67,7 @@ project-root/
 |-- README.md               # Documentação do projeto
 |-- logs/                   # Pasta para arquivos de log
 `-- tests/                  # Testes unitários para os componentes do ETL
+```
 
 ## Processo ETL
 
@@ -92,7 +95,8 @@ Inserção de Dados: Carrega os dados transformados na tabela de destino do banc
 
 Executar o Pipeline ETL
 
-python etl_pipeline.py
+```python etl_pipeline.py
+```
 
 Agendar o Pipeline
 
@@ -100,9 +104,10 @@ Use uma ferramenta de agendamento como cron (Linux/Mac) ou o Agendador de Tarefa
 
 Exemplo de tarefa cron para executar o script diariamente à meia-noite:
 
-0 0 * * * /usr/bin/python3 /path/to/etl_pipeline.py
+```0 0 * * * /usr/bin/python3 /path/to/etl_pipeline.py
+```
 
-Registro e Monitoramento
+## Registro e Monitoramento
 
 Os logs são armazenados no diretório logs/.
 
@@ -118,6 +123,6 @@ Testes
 
 Execute os testes unitários usando:
 
-pytest tests/
-
+```pytest tests/
+```
 
