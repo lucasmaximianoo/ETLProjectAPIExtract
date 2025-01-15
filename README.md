@@ -95,8 +95,7 @@ Inserção de Dados: Carrega os dados transformados na tabela de destino do banc
 
 Executar o Pipeline ETL
 
-```python etl_pipeline.py
-```
+``` python etl_pipeline.py ```
 
 Agendar o Pipeline
 
