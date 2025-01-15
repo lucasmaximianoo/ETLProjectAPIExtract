@@ -103,8 +103,7 @@ Use uma ferramenta de agendamento como cron (Linux/Mac) ou o Agendador de Tarefa
 
 Exemplo de tarefa cron para executar o script diariamente à meia-noite:
 
-```0 0 * * * /usr/bin/python3 /path/to/etl_pipeline.py
-```
+``` 0 0 * * * /usr/bin/python3 /path/to/etl_pipeline.py ```
 
 ## Registro e Monitoramento
 
@@ -122,6 +121,5 @@ Testes
 
 Execute os testes unitários usando:
 
-```pytest tests/
-```
+``` pytest tests/ ```
 
