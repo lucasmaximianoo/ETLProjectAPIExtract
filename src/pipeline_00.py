@@ -16,11 +16,11 @@ POSTGRES_USER = os.getenv("POSTGRES_USER")
 POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD")
 POSTGRES_HOST= os.getenv("POSTGRES_HOST")
 POSTGRES_PORT = os.getenv("POSTGRES_PORT")
-POSTGRES_NAME = os.getenv("POSTGRES_NAME")
+POSTGRES_DB = os.getenv("POSTGRES_DB")
 
 # Construindo a URL do database
 
-DATABASE_URL = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_NAME}"
+DATABASE_URL = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}"
 
 # Cria o engine e a sessão
 engine = create_engine(DATABASE_URL)
@@ -42,7 +42,7 @@ def transform_dados_bitcoin(dados):
     valor = dados["data"]["amount"]
     criptomoeda = dados["data"]["base"]
     moeda = dados["data"]["currency"]
-    timestamp = datetime.now().timestamp()
+    timestamp = datetime.now()
 
     dados_transformados = {
         "valor": valor,

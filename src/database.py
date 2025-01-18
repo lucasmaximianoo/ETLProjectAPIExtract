@@ -12,5 +12,6 @@ class BitcoinPreco(Base):
         id = Column(Integer,primary_key=True,autoincrement=True)
         valor = Column(Float, nullable=False)
         criptomoeda = Column(String(50), nullable=False)
+        moeda = Column(String(10), nullable=False)
+        timestamp = Column(DateTime, default=datetime.now)
 
-        
